@@ -40,7 +40,12 @@ public class Kafe09 {
             case 'L':
                 totalHarga += 0.4 * totalHarga;
                 break;
+            default:
+                System.out.println("ukuran cup yang dipilih tidak tersedia.");
+                sc.close();
+                return;
         }
+        
         double diskon = keanggotaan ? 0 : 0.1;
         double nominalBayar = totalHarga - (diskon * totalHarga);
 
